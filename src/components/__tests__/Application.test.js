@@ -2,7 +2,7 @@ import React from "react";
 
 import axios from 'axios';
 
-import { render, cleanup, waitForElement, fireEvent, getByText, prettyDOM, getAllByTestId, getByAltText, getByPlaceholderText, queryByText,  } from "@testing-library/react";
+import { render, cleanup, waitForElement, fireEvent, getByText, getAllByTestId, getByAltText, getByPlaceholderText, queryByText,  } from "@testing-library/react";
 
 import Application from "components/Application";
 
@@ -21,7 +21,7 @@ describe("Application", () => {
   });
   
   it ("loads data, books an interiew and reduces the spots remaining for the first day by 1", async () => {
-    const { container, debug } = render(<Application />);
+    const { container } = render(<Application />);
     
     await waitForElement(() => getByText(container, "Archie Cohen"));
     
@@ -81,7 +81,7 @@ describe("Application", () => {
   it("loads data, edits an interview and keeps the spots remaining for Monday the same", async () => {
 
     // 1. Render the App
-    const { container, debug } = render(<Application />);
+    const { container } = render(<Application />);
 
     // 2. Wait until "Archie  Cohen" is displayed
     await waitForElement(() => getByText(container, "Archie Cohen"));
