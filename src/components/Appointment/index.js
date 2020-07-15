@@ -51,7 +51,7 @@ export default function Appointment(props) {
     transition(EDIT);
   }
 
-
+  // Conditionally renders components based on mode
   return (
   <article className="appointment" data-testid="appointment">
     <Header time={props.time}/>
