@@ -110,7 +110,6 @@ describe("Application", () => {
     );
     
     expect(getByText(day, "1 spot remaining")).toBeInTheDocument();
-    // console.log(prettyDOM(appointment));
   });
 
   it("shows the save error when failing to save an appointment", async () => {

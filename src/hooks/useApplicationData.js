@@ -13,7 +13,7 @@ export default function useApplicationData() {
   
   const setDay = day => setState({ ...state, day });
   
-  
+  // Sets state based on database
   useEffect(() => {
     
     Promise.all([axios.get('/api/days'), (axios.get('/api/appointments')), (axios.get('/api/interviewers'))])
@@ -23,12 +23,11 @@ export default function useApplicationData() {
   }, []);
   
   function bookInterview(id, interview) {
-    console.log(id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
     };
-    console.log(appointment);
+
     const appointments = {
       ...state.appointments,
       [id]: appointment
