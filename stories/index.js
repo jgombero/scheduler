@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import Button from "components/Button";
-import DayListItem from "components/DayListItem";
-import DayList from "components/DayList";
-import InterviewerListItem from "components/InterviewerListItem";
-import InterviewerList from "components/InterviewerList";
+import DayListItem from "components/DayList/DayListItem";
+import DayList from "components/DayList/DayList";
+import InterviewerListItem from "components/InterviewerList/InterviewerListItem";
+import InterviewerList from "components/InterviewerList/InterviewerList";
 import Appointment from "components/Appointment/index";
 import Header from "components/Appointment/Header";
 import Empty from "components/Appointment/Empty";
