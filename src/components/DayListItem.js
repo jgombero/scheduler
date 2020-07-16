@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import "components/DayListItem.scss";
 
+// Conditionally sets spots remaining text for none, one, or many spots
 const formatSpots = (spotsRemaining) => {
   if (spotsRemaining === 0) {
     return 'no spots remaining';
@@ -13,12 +14,14 @@ const formatSpots = (spotsRemaining) => {
   }
 }
 
+
 export default function DayListItem(props) {
   const dayClass = classNames("day-list__item", {
     "day-list__item--selected": props.selected,
     "day-list__item--full": !props.spots
   });
 
+  // Returns each day of the week and how many interview spots are remaining
   return (
     <li 
       className={dayClass}

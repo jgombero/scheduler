@@ -4,6 +4,7 @@ import Button from "components/Button";
 
 export default function Confirm(props) {
 
+  // Returns confirmation page, asking user to confirm dangerous activity
   return (
     <main className="appointment__card appointment__card--confirm">
       <h1 className="text--semi-bold">{props.message}</h1>

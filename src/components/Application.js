@@ -9,6 +9,7 @@ import "components/Application.scss";
 
 export default function Application(props) {
 
+  // Grabs the state from the useApplicationData hook
   const {
     state,
     setDay,
@@ -16,13 +17,16 @@ export default function Application(props) {
     cancelInterview
   } = useApplicationData();
   
-  
+  // Uses selector to get interviewers array for the specific state day
   const interviewers = getInterviewersForDay(state, state.day);
-  
+
+  // Uses selector to get appointments array for the specific state day
   const appointments = getAppointmentsForDay(state, state.day);
 
+  // Maps through the appointments array and returns each appointment for the day
   const schedule = appointments.map(appointment => {
 
+    // Uses selector to get data for each interview for each appointment slot
     const interview = getInterview(state, appointment.interview);
 
     return (
@@ -36,7 +40,8 @@ export default function Application(props) {
       />
     );
   });
-
+  
+  // Returns the main section including list of days and appointments for each clicked day
   return (
     <main className="layout">
       <section className="sidebar">

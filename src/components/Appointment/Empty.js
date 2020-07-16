@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function Empty(props) {
 
+  // Returns an unbooked appointment slot. User can click add button to access "Form" page
   return (
     <main className="appointment__add">
       <img

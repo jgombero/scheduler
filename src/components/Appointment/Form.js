@@ -7,16 +7,19 @@ export default function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
+  // Resets the form to have no input
   const reset = function() {
     setName("");
     setInterviewer(null);
   };
 
+  // Cancels the form submission
   const cancel = function() {
     reset();
     props.onCancel();
   };
 
+  // Verifies the user entered a name
   function validate() {
     if (name === '') {
       setError("Student name cannot be blank");
@@ -28,6 +31,7 @@ export default function Form(props) {
     props.onSave(name, interviewer);
   }
 
+  // Returns the main form for users to input values to book an appointment
   return (
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">

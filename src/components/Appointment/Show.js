@@ -3,6 +3,8 @@ import React from 'react';
 
 export default function Show(props) {
 
+  // Returns booked appointment card
+  // Appointment has student name, and interviewer or "No interviewer Assigned" if interviewer is unavailable
   return (
     <main className="appointment__card appointment__card--show">
       <section className="appointment__card-left">

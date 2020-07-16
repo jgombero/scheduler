@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 export default function InterviewerList(props) {
 
+  // Maps through the interviewers prop and returns each individual interviewer
   const interviewers = props.interviewers.map(interviewer => {
     return (
       <InterviewerListItem 
@@ -17,6 +18,7 @@ export default function InterviewerList(props) {
     );
   });
 
+  // Returns section populated with all interviewers for the day
   return (
     <section className="interviewers">
       <h4 className="interviewers__header text--light">Interviewer</h4>
@@ -27,6 +29,7 @@ export default function InterviewerList(props) {
   );
 };
 
+// Sets specific prop types
 InterviewerList.propTypes = {
   value: PropTypes.number,
   onChange: PropTypes.func.isRequired

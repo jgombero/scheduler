@@ -3,6 +3,7 @@ import React from 'react';
 
 export default function Error(props) {
 
+  // Returns an error page if response from api returns an error
   return (
     <main className="appointment__card appointment__card--error">
       <section className="appointment__error-message">
