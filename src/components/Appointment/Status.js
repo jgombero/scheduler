@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Status(props) {
 
-  // Returns a loading screen with text either "saving" or "deleting"
+  // Returns a loading screen with text "saving" or "deleting"
   return (
     <main className="appointment__card appointment__card--status">
       <img
