@@ -4,7 +4,7 @@ import Appointment from "components/Appointment/index";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 import useApplicationData from "hooks/useApplicationData";
 
-import "components/Application.scss";
+import "components/styles/Application.scss";
 
 
 export default function Application(props) {

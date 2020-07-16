@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "components/Appointment/Header";
 import Show from "components/Appointment/Show";
 import Empty from "components/Appointment/Empty";
-import "components/Appointment/styles.scss";
+import "components/Appointment/styles/styles.scss";
 import useVisualMode from "hooks/useVisualMode";
 import Form from "components/Appointment/Form";
 import Status from "components/Appointment/Status";

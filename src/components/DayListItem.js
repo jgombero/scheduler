@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from 'classnames';
 
-import "components/DayListItem.scss";
+import "components/styles/DayListItem.scss";
 
 // Conditionally sets spots remaining text for none, one, or many spots
 const formatSpots = (spotsRemaining) => {
